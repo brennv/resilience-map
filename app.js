@@ -18,7 +18,7 @@ console.log(process.env.MONGO_CONNECTION_STRING);
 app.use(logger);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));  
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
 var pushpinRouter = require('./routes/pushpinRoutes')(Pushpin);
 var geoJsonRouter = require('./routes/geoJsonRoutes')(Pushpin); 
